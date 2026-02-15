@@ -1,0 +1,552 @@
+/* Google Fonts - BWPL style typography (angular, sporty, tech) */
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+/* ============================================
+   BWPL AUCTION SYSTEM - DESIGN TOKENS
+   Themed for Bangalore Willows Cricket Club
+   ============================================ */
+
+:root {
+  /* BWC Brand Colors */
+  --bwpl-primary: #e31837; /* BWC Red */
+  --bwpl-primary-dark: #b81430; /* Darker Red */
+  --bwpl-secondary: #1b3a5d; /* BWC Navy Blue */
+  --bwpl-secondary-light: #2a4f7a;
+  --bwpl-accent: #ffffff; /* White */
+  --bwpl-gold: #d4af37; /* Gold accent */
+
+  /* Background System - Navy/Dark tones */
+  --bg-deepest: #0a0e14;
+  --bg-deep: #0d1520;
+  --bg-surface: #14202e;
+  --bg-elevated: #1b2b3d;
+  --bg-hover: #243548;
+
+  /* Text System */
+  --text-primary: #ffffff;
+  --text-secondary: #a8b8c8;
+  --text-muted: #6b7d8f;
+
+  /* Tier Colors - S Class (Gold) */
+  --tier-elite-primary: #ffd700;
+  --tier-elite-secondary: #ffa500;
+  --tier-elite-glow: rgba(255, 215, 0, 0.6);
+  --tier-elite-bg: linear-gradient(135deg, #1a1505 0%, #2d2510 100%);
+
+  /* Tier Colors - A Class (Silver) */
+  --tier-asquad-primary: #c0c0c0;
+  --tier-asquad-secondary: #a8a8a8;
+  --tier-asquad-glow: rgba(192, 192, 192, 0.5);
+  --tier-asquad-bg: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+
+  /* Tier Colors - B Class (Bronze) */
+  --tier-regular-primary: #cd7f32;
+  --tier-regular-secondary: #dda15e;
+  --tier-regular-glow: rgba(205, 127, 50, 0.4);
+  --tier-regular-bg: linear-gradient(135deg, #1a1408 0%, #2d2010 100%);
+
+  /* Status Colors */
+  --status-sold: #22c55e;
+  --status-unsold: #e31837;
+  --status-available: #ffffff;
+
+  /* Animation Timings */
+  --timing-fast: 150ms;
+  --timing-normal: 300ms;
+  --timing-slow: 500ms;
+  --timing-dramatic: 800ms;
+
+  /* Shadows */
+  --shadow-glow: 0 0 40px rgba(227, 24, 55, 0.3);
+  --shadow-card:
+    0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background: var(--bg-deepest);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display font for headings and branding - matches BWPL logo style */
+.font-display {
+  font-family: "Orbitron", "Rajdhani", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Secondary display font for subheadings */
+.font-display-alt {
+  font-family: "Rajdhani", "Orbitron", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.font-display-alt-2 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+.font-display {
+  font-family: "Bebas Neue", "Impact", system-ui, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-hover);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ============================================
+   CUSTOM ANIMATIONS
+   ============================================ */
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px var(--tier-elite-glow);
+  }
+  50% {
+    box-shadow:
+      0 0 40px var(--tier-elite-glow),
+      0 0 60px var(--tier-elite-glow);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes stamp {
+  0% {
+    transform: scale(3) rotate(-15deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) rotate(-12deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-12deg);
+    opacity: 1;
+  }
+}
+
+@keyframes beam-sweep {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(300%) skewX(-20deg);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-stamp {
+  animation: stamp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.glass {
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-border {
+  position: relative;
+  background: var(--bg-surface);
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    var(--bwpl-primary),
+    var(--bwpl-secondary)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--bwpl-primary),
+    var(--bwpl-secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Tier-specific backgrounds */
+.tier-elite-bg {
+  background: var(--tier-elite-bg);
+}
+
+.tier-asquad-bg {
+  background: var(--tier-asquad-bg);
+}
+
+.tier-regular-bg {
+  background: var(--tier-regular-bg);
+}
+
+/* ============================================
+   PRESENTATION VIEW STYLES
+   ============================================ */
+
+.presentation-view {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-deepest);
+  overflow: hidden;
+}
+
+.presentation-view::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 20% 20%,
+      rgba(0, 255, 135, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 80% 80%,
+      rgba(96, 165, 250, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+/* Grid pattern overlay */
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+.league-title {
+  font-style: italic;
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+/* ============================================
+   ADMIN PANEL STYLES
+   ============================================ */
+
+.admin-panel {
+  min-height: 100vh;
+  background: var(--bg-deep);
+}
+
+.admin-sidebar {
+  width: 260px;
+  background: var(--bg-surface);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+/* Form Inputs */
+.input-field {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--bg-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: all var(--timing-fast);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--bwpl-primary);
+  box-shadow: 0 0 0 3px rgba(0, 255, 135, 0.1);
+}
+
+.input-field::placeholder {
+  color: var(--text-muted);
+}
+
+/* Select */
+.select-field {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--bg-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all var(--timing-fast);
+}
+
+.select-field:focus {
+  outline: none;
+  border-color: var(--bwpl-primary);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--timing-fast);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--bwpl-primary);
+  color: var(--bg-deepest);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--bwpl-primary-dark);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--bg-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-danger {
+  background: var(--status-unsold);
+  color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.btn-success {
+  background: var(--status-sold);
+  color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+  background: #16a34a;
+}
+
+.btn-large {
+  padding: 14px 28px;
+  font-size: 16px;
+}
+
+.btn-icon {
+  padding: 10px;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.card-elevated {
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-card);
+}
+
+/* Label */
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-s-class {
+  background: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+  border: 1px solid #ffd700;
+}
+
+.badge-a-class {
+  background: rgba(192, 192, 192, 0.15);
+  color: #c0c0c0;
+  border: 1px solid #a8a8a8;
+}
+
+.badge-b-class {
+  background: rgba(205, 127, 50, 0.2);
+  color: #cd7f32;
+  border: 1px solid #cd7f32;
+}
+
+.badge-c-class {
+  background: rgba(96, 165, 250, 0.2);
+  color: #60a5fa;
+  border: 1px solid #60a5fa;
+}
+
+.badge-d-class {
+  background: rgba(52, 211, 153, 0.2);
+  color: #34d399;
+  border: 1px solid #34d399;
+}
+
+.badge-sold {
+  background: rgba(34, 197, 94, 0.2);
+  color: var(--status-sold);
+}
+
+.badge-unsold {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--status-unsold);
+}
+
+.badge-available {
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--status-available);
+}

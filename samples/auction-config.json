@@ -1,0 +1,144 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "BWPL Season 6.0 Auction Configuration",
+    "exportedAt": "2026-02-15T00:00:00.000Z"
+  },
+  
+  "tournament": {
+    "name": "BWPL",
+    "fullName": "Bangalore Willows Premier League",
+    "season": "6.0",
+    "year": 2026,
+    "clubName": "Bangalore Willows Cricket Club"
+  },
+  
+  "purseSettings": {
+    "defaultPurse": 10000000,
+    "currency": "INR",
+    "currencySymbol": "₹",
+    "minPlayersPerTeam": 11,
+    "maxPlayersPerTeam": 15,
+    "maxRetentionsPerTeam": 3
+  },
+  
+  "tiers": [
+    {
+      "id": "s-class",
+      "name": "S-Class",
+      "basePrice": 1000000,
+      "color": "#FFD700",
+      "accentColor": "#B8860B",
+      "icon": "trophy",
+      "description": "Elite performers - Average 40+, Strike Rate 140+"
+    },
+    {
+      "id": "a-class",
+      "name": "A-Class",
+      "basePrice": 750000,
+      "color": "#C0C0C0",
+      "accentColor": "#808080",
+      "icon": "star",
+      "description": "Strong performers with consistent records"
+    },
+    {
+      "id": "b-class",
+      "name": "B-Class",
+      "basePrice": 500000,
+      "color": "#CD7F32",
+      "accentColor": "#8B4513",
+      "icon": "award",
+      "description": "Good all-rounders with potential"
+    },
+    {
+      "id": "c-class",
+      "name": "C-Class",
+      "basePrice": 300000,
+      "color": "#60A5FA",
+      "accentColor": "#3B82F6",
+      "icon": "target",
+      "description": "Developing players with room to grow"
+    },
+    {
+      "id": "d-class",
+      "name": "D-Class",
+      "basePrice": 100000,
+      "color": "#34D399",
+      "accentColor": "#10B981",
+      "icon": "user",
+      "description": "New or uncapped players"
+    }
+  ],
+  
+  "teams": [
+    {
+      "name": "Chennai Kings",
+      "shortName": "CK",
+      "primaryColor": "#FFCB05",
+      "secondaryColor": "#004BA0",
+      "logo": "",
+      "initialPurse": 10000000
+    },
+    {
+      "name": "Mumbai Warriors",
+      "shortName": "MW",
+      "primaryColor": "#004BA0",
+      "secondaryColor": "#D4AF37",
+      "logo": "",
+      "initialPurse": 10000000
+    },
+    {
+      "name": "Delhi Dynamos",
+      "shortName": "DD",
+      "primaryColor": "#DC2626",
+      "secondaryColor": "#1E40AF",
+      "logo": "",
+      "initialPurse": 10000000
+    },
+    {
+      "name": "Kolkata Knights",
+      "shortName": "KK",
+      "primaryColor": "#7C3AED",
+      "secondaryColor": "#FCD34D",
+      "logo": "",
+      "initialPurse": 10000000
+    },
+    {
+      "name": "Bangalore Bulls",
+      "shortName": "BB",
+      "primaryColor": "#DC2626",
+      "secondaryColor": "#000000",
+      "logo": "",
+      "initialPurse": 10000000
+    },
+    {
+      "name": "Hyderabad Hawks",
+      "shortName": "HH",
+      "primaryColor": "#F97316",
+      "secondaryColor": "#000000",
+      "logo": "",
+      "initialPurse": 10000000
+    }
+  ],
+  
+  "auctionRules": {
+    "minBidIncrement": 10000,
+    "bidIncrements": [
+      { "upTo": 400000, "increment": 10000 },
+      { "upTo": 750000, "increment": 25000 },
+      { "upTo": 1400000, "increment": 50000 },
+      { "upTo": 2500000, "increment": 100000 },
+      { "upTo": null, "increment": 250000 }
+    ],
+    "autoIncrementRules": [
+      { "upTo": 400000, "increment": 10000, "label": "Up to ₹4L: +₹10K" },
+      { "upTo": 750000, "increment": 25000, "label": "₹4L-7.5L: +₹25K" },
+      { "upTo": 1400000, "increment": 50000, "label": "₹7.5L-14L: +₹50K" },
+      { "upTo": 2500000, "increment": 100000, "label": "₹14L-25L: +₹1L" },
+      { "upTo": null, "increment": 250000, "label": "Above ₹25L: +₹2.5L" }
+    ],
+    "rtmEnabled": true,
+    "rtmPriceMatch": true,
+    "unsoldReauctionEnabled": true
+  }
+}

@@ -1,0 +1,86 @@
+╔═══════════════════════════════════════════════════════════════╗
+║              BWPL AUCTION - QUICK REFERENCE CARD              ║
+╚═══════════════════════════════════════════════════════════════╝
+
+Print this and keep it handy during the auction!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                      BEFORE THE AUCTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Double-click START.bat to launch the app
+□ Go to Admin → Teams: Add all teams with logos
+□ Go to Admin → Players: Import player CSV
+□ Go to Admin → Players: Upload Photos (folder with ID filenames)
+□ Go to Admin → Teams: Add retained players
+□ Go to Admin → Config: Set purse amounts, tier prices
+□ Test the presentation screen on projector/stream
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                      KEYBOARD SHORTCUTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Space     = Pause / Resume auction
+  Enter     = Confirm SOLD
+  U         = Mark UNSOLD
+  Esc       = Clear / Cancel
+  1-9       = Select team (by number)
+  ↑ ↓       = Navigate player queue
+  +         = Quick bid increment
+  ?         = Show all shortcuts
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                      AUCTION FLOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  1. Click player from queue (left panel)
+  2. Player appears on presentation screen
+  3. Teams bid by clicking team buttons (auto-increments!)
+  4. Or use quick bid buttons (+100, +500, etc.)
+  5. Click SOLD when bidding ends
+  6. Select next player and repeat
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                    AUTO-INCREMENT RULES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Current Bid        Clicking Team Adds
+  ───────────        ──────────────────
+  Up to ₹400         +₹10
+  Up to ₹750         +₹25
+  Up to ₹1,400       +₹50
+  Up to ₹2,500       +₹100
+  Above ₹2,500       +₹250
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                      VIEW CONTROLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Use top buttons to switch presentation view:
+  
+  [Auction]  = Live bidding screen (default)
+  [Teams]    = Show all team standings
+  [Pool]     = Show all players
+  [Splash]   = BWPL logo screen (for breaks)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                      EMERGENCY FIXES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Wrong bid amount?
+  → Use manual bid input box to set correct amount
+
+  Sold to wrong team?
+  → Go to Teams page, find player, remove from team
+  → Go back to Auction, re-auction the player
+
+  App frozen?
+  → Refresh browser (F5)
+  → Data is auto-saved, nothing will be lost
+
+  Need to restart auction?
+  → Admin → Auction → Reset Auction button
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                  Good luck with your auction! 🏏
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
