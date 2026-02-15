@@ -1,4 +1,4 @@
-# 🏏 BWPL Auction App
+# 🏏 Cricket Auction App
 
 A modern, feature-rich cricket auction application built with React. Perfect for conducting IPL-style player auctions for your cricket league or club.
 
