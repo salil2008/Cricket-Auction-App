@@ -64,6 +64,18 @@ if [ ! -d "node_modules" ]; then
     echo -e "${GREEN}[OK]${NC} Dependencies installed!"
 fi
 
+# Build the project
+echo ""
+echo -e "${YELLOW}[BUILD]${NC} Building BWPL Auction..."
+npm run build
+if [ $? -ne 0 ]; then
+    echo ""
+    echo -e "${RED}[ERROR] Build failed!${NC}"
+    read -p "Press Enter to exit..."
+    exit 1
+fi
+echo -e "${GREEN}[OK]${NC} Build complete!"
+
 echo ""
 echo -e "${GREEN}[STARTING]${NC} Launching BWPL Auction..."
 echo ""

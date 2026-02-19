@@ -45,6 +45,18 @@ if not exist "node_modules\" (
     echo  [OK] Dependencies installed!
 )
 
+:: Build the project
+echo.
+echo  [BUILD] Building BWPL Auction...
+call npm run build
+if %ERRORLEVEL% NEQ 0 (
+    echo.
+    echo  [ERROR] Build failed!
+    pause
+    exit /b 1
+)
+echo  [OK] Build complete!
+
 echo.
 echo  [STARTING] Launching BWPL Auction...
 echo.
